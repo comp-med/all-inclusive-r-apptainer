@@ -1,0 +1,13 @@
+BootStrap: docker
+From: rocker/r-ver:latest
+
+%post
+    apt-get -y update && \
+    apt-get -y install zlib1g zlib1g-dev libglpk-dev libpng-dev \
+        libxt6 pkg-config libxml2-dev liblzma-dev libbz2-dev tk \
+        libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev \
+        libpng-dev libtiff5-dev libjpeg-dev cmake automake libmagick++-dev \
+        curl python3-pip && \
+    pip3 install -U --no-cache-dir --upgrade pip && \
+    pip3 install -U --no-cache-dir radian
+
